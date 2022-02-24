@@ -2,21 +2,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.galaxyproject.dockstore-galaxy-interface</groupId>
-    <artifactId>dockstore-galaxy-interface</artifactId>
+    <groupId>com.github.dockstore.dockstore-snakemake-interface</groupId>
+    <artifactId>dockstore-snakemake-interface</artifactId>
     <packaging>jar</packaging>
-    <name>dockstore-galaxy-interface</name>
-    <version>0.0.7-SNAPSHOT</version>
+    <name>dockstore-snakemake-interface</name>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <github.url>scm:git:git@github.com:galaxyproject/dockstore-galaxy-interface.git</github.url>
-        <dockstore.version>1.9.0-alpha.1</dockstore.version>
+        <github.url>scm:git:git@github.com:dockstore/dockstore-snakemake-interface.git</github.url>
+        <dockstore.version>1.13.0-alpha.0-SNAPSHOT</dockstore.version>
         <slf4j.version>1.7.26</slf4j.version>
         <plugin.id>${project.artifactId}</plugin.id>
-        <plugin.class>org.galaxyproject.dockstore_galaxy_interface.language.GalaxyWorkflowPlugin</plugin.class>
+        <plugin.class>org.dockstore.dockstore_snakemake_interface.language.SnakeMakeWorkflowPlugin</plugin.class>
         <plugin.version>${project.version}</plugin.version>
         <jackson.version>2.11.3</jackson.version>
-        <plugin.provider>jmchilton</plugin.provider>
+        <plugin.provider>wshands</plugin.provider>
         <plugin.dependencies />
     </properties>
 
@@ -36,6 +36,13 @@
     </scm>
 
     <repositories>
+        <repository>
+            <id>artifacts.oicr.on.ca.ca-snapshots</id>
+            <url>https://artifacts.oicr.on.ca/artifactory/collab-snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
         <repository>
             <id>artifacts.oicr.on.ca</id>
             <name>artifacts.oicr.on.ca</name>
